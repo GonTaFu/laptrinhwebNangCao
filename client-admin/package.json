@@ -3,11 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@svgr/webpack": "^8.1.0",
     "axios": "^1.7.9",
+    "client-admin": "file:",
     "cra-template": "1.2.0",
+    "http-proxy-middleware": "^3.0.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
+    "resolve-url-loader": "^5.0.0",
     "web-vitals": "^4.2.4"
   },
   "scripts": {
@@ -34,22 +38,13 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "/admin",
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
-  "devDependencies": {},
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devServer": {
-    "proxy": {
-      "/": {
-        "target": "http://localhost:3000",
-        "secure": false
-      }
-    },
-    "allowedHosts": [
-      "all"
-    ]
-  }
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+  },
+  "proxy": "http://localhost:3000"
 }

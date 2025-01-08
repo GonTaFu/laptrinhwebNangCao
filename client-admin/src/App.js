@@ -21,7 +21,11 @@ class App extends Component {
   componentDidMount() {
     axios.get('/hello').then((res) => {
       const result = res.data;
+      console.log(result)
       this.setState({message: result.message});
+    }).catch((error) => {
+      console.error('There was an error!', error); // Log lỗi ra console
+      this.setState({ error: error.message, message: 'Failed to load message.' }); // Cập nhật state lỗi
     });
   }
 }
