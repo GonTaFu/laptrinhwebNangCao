@@ -41,15 +41,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devServer": {
-    "proxy": {
-      "/": {
-        "target": "http://localhost:3000",
-        "secure": false
-      }
-    },
-    "allowedHosts": [
-      "all"
-    ]
-  }
+  "proxy" : "http://localhost:3000"
 }
