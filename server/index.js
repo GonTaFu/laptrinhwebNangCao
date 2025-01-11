@@ -1,6 +1,11 @@
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+//bị block thì thêm cors vào để được access
+const cors = require('cors');
+app.use(cors());
+
 app.listen(PORT, () => {
 console.log(`Server listening on ${PORT}`);
 });
